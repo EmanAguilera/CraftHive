@@ -1,0 +1,1166 @@
+#content main .head-title .left .breadcrumb li a {
+	color: #5C2E0A;
+	pointer-events: none;
+    font-weight: 500;
+}
+        .dropdown ul li {
+           text-align: center;
+        }
+
+        
+        .container .content .cards {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .content .cards .card {
+    width: calc(25% - 10px); /* 4 cards per row with some spacing */
+    height: 135px;
+    background: linear-gradient(135deg, #8E5923, #FEDFB1);
+    margin: 5px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid #5C2E0A;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.container .content .cards .card .box {
+    padding-left: 10px;
+    color: #5C2E0A; /* Text with vintage hue */
+    z-index: 1;
+}
+
+.container .content .cards .card h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.container .content .cards .card h3 {
+    font-size: 15px;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.container .content .cards .card .icon-case {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #EE7E1A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.container .content .cards .card::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: rgba(121, 42, 3, 0.15);
+    clip-path: polygon(0 0, 60% 0, 30% 100%, 0% 100%);
+    top: -20%;
+    left: -20%;
+    z-index: 0;
+}
+
+.container .content .cards .card:hover {
+    background: linear-gradient(135deg, #792A03, #C69B68);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.container .content .cards .card:hover h1,
+.container .content .cards .card:hover h3 {
+    color: #FFF3DC; /* Text changes to a light vintage tone */
+}
+
+.container .content .cards .card:hover .icon-case {
+    background: #5C2E0A; /* Icon background darkens */
+}
+
+@media (max-width: 768px) {
+    .container .content .cards .card {
+        width: calc(100% - 10px); /* 1 card per row */
+        height: 180px; /* Adjust the card height for mobile */
+    }
+
+    .container .content .content-2 {
+        justify-content: center; /* Center content for smaller screens */
+    }
+}
+
+.container .content .content-2 {
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.container .content .content-2 .recent-payments {
+    min-height: 50vh;
+    flex: 5;
+    background: #FEDFB1;
+    margin: 0 25px 25px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content .content-2 .new-students{
+    flex: 2;
+    background: #FEDFB1;
+    min-height: 50vh;
+    margin: 0 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+}
+.container .content .content-2 .new-students table td:nth-child(1) img{
+    height: 40px;
+    width: 40px;
+}
+
+
+.btn{
+    background: #5C2E0A;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+.btn:hover{
+    color: #f05462;  
+    background: white;   
+    padding: 3px 8px;
+    border: 2px solid #5C2E0A;
+ }
+
+
+.btn{
+    background: #5C2E0A;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+.btn:hover{
+    color: #f05462;  
+    background: white;   
+    padding: 3px 8px;
+    border: 2px solid #5C2E0A;
+ }
+ .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2 solid #999;
+ }
+/* Flex container for charts */
+.charts-container {
+    display: flex;
+    flex-direction: column; /* Stack charts vertically */
+    gap: 20px; /* Space between the chart containers */
+    margin-top: -10px;
+    padding: 20px;
+    margin-bottom: -20px;
+}
+
+/* Style for individual chart containers */
+.chart-container2 {
+    width: 100%; /* Make the width responsive */
+    height: 550px; /* Set a base height for the chart container */
+    max-width: 1000px; /* Limit the width for large screens */
+    margin: 20px auto; /* Center-align the container */
+    padding: 20px;
+    background: linear-gradient(90deg, #8E5923, #FEDFB1);
+    border: 2px solid #5C2E0A;
+    border-radius: 12px 4px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+.chart-container2:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Heading style */
+.chart-container2 h3 {
+    color: #5C2E0A;
+    font-size: 1.9em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Chart canvas style */
+.chart-container2 canvas {
+    width: 100%; /* Make the canvas fill the container */
+    height: 100%; /* Make the canvas fill the container */
+    min-height: 200px; /* Ensure a minimum height for legibility */
+    background: #FFF3DC;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Timeframe button container */
+.timeframe-buttons {
+    display: flex;
+    justify-content: center; /* Center-align buttons */
+    gap: 15px; /* Space between buttons */
+    margin: 15px 0 20px 0; /* Adjust spacing above and below */
+}
+
+/* Button styles */
+.timeframe-btn {
+    background-color: #C69B68; /* Warm vintage beige */
+    color: #5C2E0A; /* Deep brown text */
+    border: 2px solid #8E5923; /* Muted gold border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px; /* Slightly larger text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.3); /* Subtle shadow and highlight */
+}
+
+.timeframe-btn:hover {
+    background-color: #FEDFB1; /* Soft peach tone for hover */
+    box-shadow: -6px 6px 12px rgba(0, 0, 0, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px); /* Slight hover lift effect */
+}
+
+.timeframe-btn:active {
+    background-color: #EE7E1A; /* Bright orange for active state */
+    transform: scale(1.05); /* Slight zoom-in effect on click */
+}
+
+.timeframe-btn:focus {
+    outline: none;
+    box-shadow: 0px 0px 12px rgba(136, 89, 35, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.5); /* Golden glow for focus */
+}
+
+/* Media Queries */
+
+/* For tablets (screens with a max-width of 1024px) */
+@media (max-width: 1024px) {
+    .chart-container2 {
+        height: 550px; /* Adjust height for tablets */
+        margin: 15px auto;
+    }
+
+    .chart-container2 h3 {
+        font-size: 1.7em; /* Reduce heading size on tablets */
+    }
+
+    .timeframe-buttons {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for buttons */
+        gap: 10px; /* Space between buttons */
+    }
+
+    .timeframe-btn {
+        font-size: 13px; /* Adjust button font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+
+/* For mobile devices (screens with a max-width of 768px) */
+@media (max-width: 768px) {
+    .chart-container2 {
+        height: 420px; /* Adjust height for mobile */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .chart-container2 h3 {
+        font-size: 1.5em; /* Adjust font size of heading */
+        margin-bottom: 15px;
+    }
+
+    .timeframe-buttons {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(4, 1fr); /* Still 4 columns for buttons */
+        gap: 8px; /* Reduce gap for smaller screens */
+    }
+
+    .timeframe-btn {
+        font-size: 12px; /* Smaller font size for mobile */
+        padding: 6px 12px; /* Reduced padding */
+    }
+}
+
+/* For very small mobile screens (screens with a max-width of 480px) */
+@media (max-width: 480px) {
+    .chart-container2 {
+        display: none; /* Hide the chart on mobile */
+    }
+
+    .timeframe-buttons {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns for tiny screens */
+        gap: 6px; /* Further reduce gap */
+    }
+
+    .timeframe-btn {
+        font-size: 11px; /* Smaller font size */
+        padding: 5px 10px; /* Adjust padding */
+    }
+}
+
+td{
+    text-transform: none;
+}
+
+.product-info {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 9999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto; /* Allow vertical scrolling within the modal */
+   background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    max-width: 50rem;
+    background-color: #F0CCAB;
+    border-radius: .5rem;
+    padding:2rem;
+    margin:0 auto;
+    margin-top: 2rem;
+}
+
+.close {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 24px;
+   color: #888;
+   cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+   color: #000;
+}
+
+/* Modal Header */
+.modal-header {
+   padding-bottom: -50px;
+   margin-bottom: 10px;
+   position: relative;
+   transform: translateY(-1%);
+}
+
+
+/* Form Fields */
+.form-group {
+   margin-bottom: 20px;      
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="file"] {
+   width: 100%;
+   padding: 15px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   transition: border-color 0.3s;
+   background-color: white;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="file"]:focus {
+   outline: none;
+   border-color: #5d3b27;
+}
+
+.grid-item input[type="text"],
+.grid-item input[type="email"],
+.grid-item input[type="tel"],
+.grid-item input[type="number"],
+.grid-item input[type="file"],
+.grid-item textarea {
+   text-transform: none;
+}
+
+
+/* Submit Button */
+.btn-submit {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%; /* Adjust width as needed */
+   height: 55px;
+   background-color: #5d3b27;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   font-size: 1.7rem;
+   margin-bottom: 5px;
+}
+
+.btn-submit:hover {
+    background-color: #4d2813;
+}
+
+body.modal-open {
+   overflow: hidden;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px; /* Adjust the gap between grid items */
+}
+
+.grid-item {
+    width: 100%; /* Ensure grid items take full width of their container */
+}
+
+
+
+/* Responsive design: switch to single column layout on smaller screens */
+@media screen and (max-width: 600px) {
+.grid-container {
+grid-template-columns: 1fr; /* Switch to single column layout */
+}
+}
+
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.checkbox-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1;
+    font-size: 15px;
+}
+
+.checkbox-label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Adjust the gap between checkboxes */
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top; /* Align columns to the top */
+    width: 45%; /* Adjust column width as needed */
+}
+
+.product-action {
+    width: 100px; /* Adjust the width as needed */
+}
+
+.product-image .image-container {
+    width: 200px; /* Set the width of the container */
+    height: 160px; /* Set the height of the container */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    overflow: hidden; /* Hide any overflowing content */
+    transform: translateX(13.5%);
+}
+
+.product-image .image-container img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    max-height: 100%; /* Ensure the image does not exceed the container height */
+    display: block; /* Ensure image is displayed as a block element */
+    margin: auto; /* Center the image within the container */
+}
+
+.option-btn{
+    margin-bottom: 10px;
+
+}
+
+/* Modal container */
+/* Modal container */
+#addProductModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8); /* Dim background for focus */
+    z-index: 9999;
+    overflow: auto;
+    padding-top: 60px;
+}
+
+/* Modal content */
+.modal-content {
+    background: linear-gradient(to bottom, #FFF5E1, #F7E0C0); /* Soft parchment gradient */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 60%;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Luxurious shadow */
+    border: 1px solid #8E5727; /* Muted gold border */
+    font-family: 'Playfair Display', serif; /* Vintage typography */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8E5727; /* Decorative border */
+    padding-bottom: 15px;
+}
+
+.modal-header h1 {
+    font-size: 2.5em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.modal-header h2 {
+    font-size: 2em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.modal-header .close {
+    color: #3E2723;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.modal-header .close:hover {
+    color: #EE7E1A; /* Muted orange for a warm touch */
+    transform: rotate(90deg); /* Elegant hover effect */
+}
+
+/* Modal body */
+.modal-body {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #5C4033; /* Warm brown */
+    margin-top: 20px;
+    text-align: justify;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Section headers within the modal */
+.modal-body h4 {
+    font-size: 1.8em;
+    color: #8E5727; /* Muted gold */
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #8E5727; /* Subtle vintage divider */
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* Modal container */
+#addProductModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8); /* Dim background for focus */
+    z-index: 9999;
+    overflow: auto;
+    padding-top: 60px;
+}
+
+/* Modal content */
+.modal-content {
+    background: linear-gradient(to bottom, #FFF5E1, #F7E0C0); /* Soft parchment gradient */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 60%;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Luxurious shadow */
+    border: 1px solid #8E5727; /* Muted gold border */
+    font-family: 'Playfair Display', serif; /* Vintage typography */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8E5727; /* Decorative border */
+    padding-bottom: 15px;
+}
+
+.modal-header h1 {
+    font-size: 2.5em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.modal-header h2 {
+    font-size: 2em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.modal-header .close {
+    color: #3E2723;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.modal-header .close:hover {
+    color: #EE7E1A; /* Muted orange for a warm touch */
+    transform: rotate(90deg); /* Elegant hover effect */
+}
+
+/* Modal body */
+.modal-body {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #5C4033; /* Warm brown */
+    margin-top: 20px;
+    text-align: justify;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Section headers within the modal */
+.modal-body h4 {
+    font-size: 1.8em;
+    color: #8E5727; /* Muted gold */
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #8E5727; /* Subtle vintage divider */
+    text-transform: capitalize;
+    text-align: center;
+}
+/* Media query for screens smaller than 768px (tablets and small desktops) */
+@media screen and (max-width: 768px) {
+    /* Modal content adjustment */
+    .modal-content {
+        width: 90%;  /* Set width to 90% for smaller screens */
+        max-width: 700px; /* Set max-width to limit size on larger tablets/desktops */
+        padding: 20px; /* Reduce padding */
+    }
+
+    /* Modal header adjustments */
+    .modal-header h1 {
+        font-size: 2em; /* Reduce font size */
+    }
+
+    .modal-header h2 {
+        font-size: 1.8em; /* Reduce font size */
+    }
+
+    .modal-header .close {
+        font-size: 2em; /* Smaller close button */
+    }
+
+    /* Modal body adjustments */
+    .modal-body {
+        font-size: 1.1em; /* Slightly smaller font */
+    }
+
+    .modal-body h4 {
+        font-size: 1.5em; /* Smaller section headers */
+    }
+}
+
+/* Media query for screens smaller than 480px (mobile screens) */
+@media screen and (max-width: 480px) {
+    /* Full width modal */
+    .modal-content {
+        width: 100%;  /* Full width on mobile */
+        max-width: 400px; /* Set max-width for mobile devices */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    /* Modal header adjustments */
+    .modal-header h1 {
+        font-size: 1.8em; /* Further reduce font size */
+    }
+
+    .modal-header h2 {
+        font-size: 1.5em; /* Further reduce font size */
+    }
+
+    .modal-header .close {
+        font-size: 2em; /* Smaller close button */
+    }
+
+    /* Modal body adjustments */
+    .modal-body {
+        font-size: 1em; /* Adjust font size for readability */
+    }
+
+    .modal-body h4 {
+        font-size: 1.2em; /* Smaller section headers */
+    }
+}
+
+/* Decorative profile section */
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.profile-container .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #8E5727; /* Muted gold frame */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+.profile-container .profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-container .profile-img img:hover {
+    transform: scale(1.1); /* Slight zoom for elegance */
+}
+
+.profile-container .profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 2.2em;
+    color: #3E2723;
+    margin: 0 0 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.profile-info h3 {
+    font-size: 1.5em;
+    color: #8E5727; /* Muted gold */
+    margin: 0 0 15px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.profile-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    background: linear-gradient(to right, #FFF5E1, #FEE7C3); /* Subtle gradient */
+    padding: 15px;
+    border-left: 4px solid #8E5727; /* Decorative border */
+    text-indent: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+    font-family: 'Libre Baskerville', serif;
+    position: relative;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.profile-info p::before {
+    content: "❧"; /* Decorative symbol */
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    color: #8E5727;
+    font-size: 1.5em;
+    font-family: 'Georgia', serif;
+}
+
+/* Decorative profile section */
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.profile-container .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #8E5727; /* Muted gold frame */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+.profile-container .profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-container .profile-img img:hover {
+    transform: scale(1.1); /* Slight zoom for elegance */
+}
+
+.profile-container .profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 2.2em;
+    color: #3E2723;
+    margin: 0 0 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.profile-info h3 {
+    font-size: 1.5em;
+    color: #8E5727; /* Muted gold */
+    margin: 0 0 15px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.profile-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    background: linear-gradient(to right, #FFF5E1, #FEE7C3); /* Subtle gradient */
+    padding: 15px;
+    border-left: 4px solid #8E5727; /* Decorative border */
+    text-indent: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+    font-family: 'Libre Baskerville', serif;
+    position: relative;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.profile-info p::before {
+    content: "❧"; /* Decorative symbol */
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    color: #8E5727;
+    font-size: 1.5em;
+    font-family: 'Georgia', serif;
+}
+
+/* Media query for screens smaller than 768px (tablets and small desktops) */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-container .profile-img {
+        width: 120px;  /* Smaller profile image */
+        height: 120px;
+        margin-top: 60px;  /* Adjust margin for smaller screen */
+    }
+
+    .profile-info h2 {
+        font-size: 1.8em;  /* Smaller font size for headings */
+    }
+
+    .profile-info h3 {
+        font-size: 1.3em;  /* Smaller font size for sub-headings */
+    }
+
+    .profile-info p {
+        font-size: 14px;  /* Slightly smaller font for paragraphs */
+        padding: 10px;  /* Reduced padding */
+        text-indent: 20px;  /* Adjust indentation */
+    }
+
+    .profile-info p::before {
+        font-size: 1.3em;  /* Smaller symbol for mobile screens */
+    }
+}
+
+/* Media query for screens smaller than 480px (mobile screens) */
+@media screen and (max-width: 480px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-container .profile-img {
+        width: 100px;  /* Even smaller profile image */
+        height: 100px;
+        margin-top: 40px;  /* Adjust margin */
+    }
+
+    .profile-info h2 {
+        font-size: 1.5em;  /* Further reduce heading font size */
+    }
+
+    .profile-info h3 {
+        font-size: 1.2em;  /* Further reduce sub-heading font size */
+    }
+
+    .profile-info p {
+        font-size: 13px;  /* Reduce paragraph font size */
+        padding: 8px;  /* Reduce padding */
+        text-indent: 15px;  /* Adjust indentation */
+    }
+
+    .profile-info p::before {
+        font-size: 1.2em;  /* Adjust decorative symbol size */
+    }
+}
+
+/* Modal body */
+.modal-body {
+    margin-top: 20px;
+}
+
+.modal-body label {
+    display: block;
+    font-size: 14px;
+    color: #5C2E0A;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+       --dark: #5D4037; /* Brown shade for sidebar and navbar */
+       --blue: #8E5727; /* Muted brown for accents */
+       --grey-light: #E8C595; /* Very light brown for alternating rows */
+       --main-bg: #E0E0E0; /* Updated gray for the main container */
+       --light: #FEE8C5; /* Light background color */
+       --yellow: #FFD54F; /* Yellow for status badges */
+       --orange: #FF8A65; /* Orange for status badges */
+       --white: #FEE8C5; /* White for text or backgrounds */
+       --grey:   #E8C595; /* Neutral grey for hover effects */
+   }
+
+/* Recent Transactions Section */
+.recent-transactions {
+   margin-top: 48px;
+}
+
+.recent-transactions h2 {
+   font-size: 24px;
+   font-weight: 600;
+   margin-bottom: 16px;
+   color: var(--dark);
+}
+
+.recent-transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #5C2E0A;
+    border: 2px solid #5C2E0A; /* Add border */
+}
+
+
+.recent-transactions table th, .recent-transactions table td {
+   padding: 12px;
+   text-align: center;
+   font-size: 14px;
+}
+
+.recent-transactions table th {
+   background-color: var(--blue);
+   color: #FFF3DC;
+   font-weight: bold;
+}
+
+.recent-transactions table td {
+   background-color: var(--white);
+}
+
+.recent-transactions table tr:nth-child(even) td {
+   background-color: var(--grey-light);
+}
+
+.recent-transactions table tr:hover {
+   background-color: var(--grey);
+}
+
+   /* Sidebar background color */
+   #sidebar {
+   background-color: #8E5727;
+}
+
+/* Sidebar link color */
+#sidebar a {
+   color: pink;
+}
+
+/* Sidebar active link color */
+#sidebar .active a {
+   background-color: #3E2723;
+}
+/* MAIN */
+/* CONTENT */
+
+/* General styles */
+
+/* General shared styles */
+a.delete-btn, a.option-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF; /* White text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Button padding */
+    font-size: 14px; /* Text size */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Specific styling for Delete Button */
+a.delete-btn {
+    background: linear-gradient(135deg, #8E3A15, #5C1E09); /* Dark reddish-brown gradient */
+    border: 2px solid #4A1608; /* Deep red-brown border */
+}
+
+/* Specific styling for Option Button */
+a.option-btn {
+    background: linear-gradient(135deg, #C69B68, #A16D37); /* Warm, lighter brown gradient */
+    border: 2px solid #774816; /* Medium brown border */
+    margin-bottom: 10px; /* Add bottom margin */
+}
+
+/* Icon styling inside buttons */
+a.delete-btn i, a.option-btn i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 16px; /* Icon size */
+}
+
+/* Hover effects for Delete Button */
+a.delete-btn:hover {
+    background: linear-gradient(135deg, #A64520, #742312); /* Slightly brighter reddish-brown */
+    border-color: #5A1F0A; /* Brighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Hover effects for Option Button */
+a.option-btn:hover {
+    background: linear-gradient(135deg, #E3B482, #B2774A); /* Brighter light brown gradient */
+    border-color: #8A5A23; /* Lighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Active state for Delete Button */
+a.delete-btn:active {
+    background: #5C1E09; /* Dark solid brown for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Active state for Option Button */
+a.option-btn:active {
+    background: #7A4F22; /* Medium brown solid for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Focus state for both buttons */
+a.delete-btn:focus, a.option-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(182, 125, 91, 0.8); /* Soft brown glow effect */
+}

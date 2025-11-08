@@ -1,0 +1,342 @@
+/* Abstract Collage Container */
+.abstract-collage {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 650px;
+    margin: 40px auto;
+    background-color: var(--light);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Collage Images */
+  .abstract-collage img {
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0.85;
+    z-index: 1;
+    border: 3px solid var(--light-yellow);
+  }
+  
+  /* Individual Image Positions with Absurd Angles and Sizes */
+  .abstract-collage img:nth-child(1) {
+    top: 5%;
+    left: 10%;
+    width: 250px;
+    transform: rotate(-15deg) scale(1.1);
+    z-index: 3;
+  }
+  
+  .abstract-collage img:nth-child(2) {
+    top: 25%;
+    left: 35%;
+    width: 400px;
+    transform: rotate(20deg) scale(1.05);
+    z-index: 4;
+  }
+  
+  .abstract-collage img:nth-child(3) {
+    top: 60%;
+    left: 5%;
+    width: 300px;
+    transform: rotate(-25deg) scale(1.15);
+    z-index: 2;
+  }
+  
+  .abstract-collage img:nth-child(4) {
+    top: 15%;
+    left: 70%;
+    width: 380px;
+    transform: rotate(10deg) scale(1.1);
+    z-index: 5;
+  }
+  
+  /* Hover Interaction with Absurd Effects */
+  .abstract-collage img:hover {
+    transform: scale(1.25) rotate(0deg);
+    z-index: 10;
+    opacity: 1;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Centered Introduction with Playful Design */
+  .center-introduction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 35px;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 6;
+    animation: slideIn 0.8s ease-in-out;
+  }
+  
+  .center-introduction h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #5D4037; /* Bold color */
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .center-introduction p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Background Pattern with Abstract Shapes */
+  .abstract-collage::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at 30% 30%, #e3f2fd, #f1f8e9, #ffffff);
+    z-index: -1;
+    opacity: 0.7;
+  }
+  
+  /* Adding Abstract Shapes */
+  .shape {
+    position: absolute;
+    background-color: rgba(255, 87, 34, 0.5);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index:  1;
+    animation: float 3s infinite alternate;
+  }
+  
+  /* Additional Abstract Shapes */
+  .shape:nth-child(2) {
+    background-color: rgba(76, 175, 80, 0.5);
+    width: 200px;
+    height: 200px;
+    top: 70%;
+    left: 20%;
+    animation: float 4s infinite alternate;
+  }
+  
+  .shape:nth-child(3) {
+    background-color: rgba(33, 150, 243, 0.5);
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 50%;
+    animation: float 2.5s infinite alternate;
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) translateY(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(-10px);
+    }
+  }
+  
+  /* Page Load Animation */
+  @keyframes fadeInCollage {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .abstract-collage img,
+  .center-introduction,
+  .shape {
+    animation: fadeInCollage 1s ease-in-out;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* For tablets and smaller screens (max-width: 768px) */
+  @media (max-width: 768px) {
+      .abstract-collage {
+          height: 500px; /* Reduce height for smaller screens */
+      }
+  
+      .abstract-collage img {
+          width: 80%; /* Make images larger relative to the container */
+          left: 10%; /* Center images */
+      }
+  
+      .abstract-collage img:nth-child(1) {
+          top: 10%;
+          transform: rotate(-20deg) scale(1);
+      }
+  
+      .abstract-collage img:nth-child(2) {
+          top: 30%;
+          left: 5%;
+          transform: rotate(15deg) scale(0.9);
+      }
+  
+      .abstract-collage img:nth-child(3) {
+          top: 50%;
+          left: 15%;
+          transform: rotate(-10deg) scale(1);
+      }
+  
+      .abstract-collage img:nth-child(4) {
+          top: 40%;
+          left: 60%;
+          transform: rotate(5deg) scale(0.9);
+      }
+  
+      .center-introduction {
+          width: 90%; /* Make the introduction section wider */
+          padding: 15px 20px; /* Adjust padding */
+      }
+  
+      .center-introduction h1 {
+          font-size: 32px; /* Reduce font size */
+      }
+  
+      .center-introduction p {
+          font-size: 18px; /* Reduce font size */
+      }
+  }
+  
+  /* For mobile devices (max-width: 480px) */
+  @media (max-width: 480px) {
+      .abstract-collage {
+          height: 400px; /* Further reduce height */
+      }
+  
+      .abstract-collage img {
+          width: 90%; /* Make images even larger */
+          left: 5%; /* Center images */
+      }
+  
+      .abstract-collage img:nth-child(1) {
+          top: 5%;
+          transform: rotate(-10deg) scale(0.9);
+      }
+  
+      .abstract-collage img:nth-child(2) {
+          top: 25%;
+          left: 5%;
+          transform: rotate(10deg) scale(0.8);
+      }
+  
+      .abstract-collage img:nth-child(3) {
+          top: 50%;
+          left: 10%;
+          transform: rotate(0deg) scale(0.9);
+      }
+  
+      .abstract-collage img:nth-child(4) {
+          top: 35%;
+          left: 50%;
+          transform: rotate(-5deg) scale(0.8);
+      }
+  
+      .center-introduction {
+          width: 95%; /* Make the introduction section even wider */
+          padding: 10px 15px; /* Adjust padding */
+      }
+  
+      .center-introduction h1 {
+          font-size: 28px; /* Further reduce font size */
+      }
+  
+      .center-introduction p {
+          font-size: 16px; /* Further reduce font size */
+      }
+  
+  }
+
+  .container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background: linear-gradient(to bottom, #FFF5E1, #F7E0C0);
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-family: 'Georgia', serif; /* Vintage font style */
+}
+
+.container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--primary-color);
+    font-family: 'Georgia', serif;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.custom-button {
+    width: 100%;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.custom-button:hover {
+    background: #7A3B0E;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .custom-button {
+        font-size: 1em;
+    }
+}
+

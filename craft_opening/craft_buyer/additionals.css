@@ -1,0 +1,1091 @@
+      /* Modal Styles */
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+       --dark: #5D4037; /* Brown shade for sidebar and navbar */
+       --blue: #8E5727; /* Muted brown for accents */
+       --grey-light: #E8C595; /* Very light brown for alternating rows */
+       --main-bg: #E0E0E0; /* Updated gray for the main container */
+       --light: #FEE8C5; /* Light background color */
+       --yellow: #FFD54F; /* Yellow for status badges */
+       --orange: #FF8A65; /* Orange for status badges */
+       --white: #FEE8C5; /* White for text or backgrounds */
+       --grey:   #E8C595; /* Neutral grey for hover effects */
+   }
+
+   /* Sidebar background color */
+   #sidebar {
+   background-color: #8E5727;
+}
+
+/* Sidebar link color */
+#sidebar a {
+   color: pink;
+}
+
+/* Sidebar active link color */
+#sidebar .active a {
+   background-color: #3E2723;
+}
+
+
+/* MAIN */
+/* CONTENT */
+
+@media screen and (max-width: 768px) {
+	#sidebar {
+		width: 200px;
+	}
+
+	#content {
+		width: calc(100% - 60px);
+		left: 200px;
+	}
+
+	#content nav .nav-link {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#content nav form .form-input input {
+		display: none;
+	}
+
+	#content nav form .form-input button {
+		width: auto;
+		height: auto;
+		background: transparent;
+		border-radius: none;
+		color: var(--dark);
+	}
+
+	#content nav form.show .form-input input {
+		display: block;
+		width: 100%;
+	}
+	#content nav form.show .form-input button {
+		width: 36px;
+		height: 100%;
+		border-radius: 0 36px 36px 0;
+		color: var(--light);
+		background: var(--red);
+	}
+
+	#content nav form.show ~ .notification,
+	#content nav form.show ~ .profile {
+		display: none;
+	}
+
+	#content main .box-info {
+		grid-template-columns: 1fr;
+	}
+
+	#content main .table-data .head {
+		min-width: 420px;
+	}
+	#content main .table-data .order table {
+		min-width: 420px;
+	}
+	#content main .table-data .todo .todo-list {
+		min-width: 420px;
+	}
+}
+
+#content main .head-title .left .breadcrumb li a {
+	color: #5C2E0A;
+	pointer-events: none;
+    font-weight: 500;
+}
+
+.message{
+   position: sticky;
+   top:0; left:0;
+   z-index: 10000;
+   border-radius: .5rem;
+   background: #FFF4DE; /* Soft parchment gradient */
+   padding:1.5rem 2rem;
+   margin:0 auto;
+   max-width: 1200px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+   border: 1px solid #D2B48C; /* Light brown border for elegance */
+    transition: opacity 0.3s ease; /* Smooth transition for hiding */
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   color:var(--black);
+   cursor: pointer;
+}
+
+.message i:hover{
+   color:var(--red);
+}
+
+
+.container {
+   max-width: 1200px;
+   margin: 20px auto;
+   padding: 20px;
+}
+
+.products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.box {
+   background: linear-gradient(to bottom, #FFF5E1, #F7E0C0); /* Soft parchment gradient */
+   border: 1px solid #d2b89c; /* Subtle brown border */
+   border-radius: 15px;
+   overflow: hidden;
+   text-align: center;
+   padding: 15px;
+   transition: transform 0.3s, box-shadow 0.3s;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Luxurious shadow */
+   border: 1px solid #8E5727; /* Muted gold border */
+}
+
+.box:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+   border-radius: 8px;
+   margin-bottom: 15px;
+   border: 1px solid #d2b89c; /* Matches card border */
+}
+
+.box h3 {
+   font-size: 1.5rem;
+   color: #5e4632; /* Dark brown for headings */
+   margin-bottom: 10px;
+}
+
+.box p {
+   font-size: 1rem;
+   color: #7a5c45; /* Medium brown for descriptions */
+   margin-bottom: 8px;
+}
+
+.box .btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box .btn:hover {
+   background: #7A3B0E;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.view-details-button {
+    width: 100%;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-details-button:hover {
+    background: #7A3B0E;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.product-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8); /* Dim background for focus */
+    z-index: 9999;
+    overflow: auto;
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background: linear-gradient(to bottom, #FFF5E1, #F7E0C0); /* Soft parchment gradient */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 60%;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Luxurious shadow */
+    border: 1px solid #8E5727; /* Muted gold border */
+    font-family: 'Playfair Display', serif; /* Vintage typography */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8E5727; /* Decorative border */
+    padding-bottom: 15px;
+}
+
+.modal-header h1 {
+    font-size: 2.5em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.modal-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.modal-header h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* Modal Body */
+.modal-body {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #5C4033; /* Warm brown */
+    margin-top: 20px;
+    text-align: justify;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.modal-body p {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #5C4033; /* Warm brown tone for consistency */
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+}
+
+/* Modal Options */
+.modal-options-row {
+    display: flex; /* Aligns children in a row */
+  gap: 15px; /* Space between each option */
+  justify-content: space-between; /* Even spacing across the row */
+  margin-top: 20px;
+}
+
+.modal-options {
+  flex: 1; /* Each option takes equal space */
+  text-align: center; /* Center the content */
+}
+
+/* Adding a decorative divider for sections */
+.modal-options::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #C19A6B;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+
+.modal-options select {
+  appearance: none; /* Removes the default browser styling */
+  padding: 12px 20px;
+  border: 1px solid #C19A6B;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  background: linear-gradient(145deg, #FFF8E1, #F9E3C2); /* Gradient for depth */
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1em;
+  color: #5C4033; /* Warm brown */
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Dropdown arrow */
+.modal-options select::after {
+  content: '\25BC'; /* Unicode for the down arrow */
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #C19A6B;
+  font-size: 1.2em;
+}
+
+/* Hover and Focus Effects */
+.modal-options select:hover {
+  background: linear-gradient(145deg, #F9E3C2, #FFF8E1); /* Reverse gradient on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-options select:focus {
+  outline: none;
+  border: 2px solid #8B5A2B; /* Richer brown on focus */
+  box-shadow: 0 0 10px rgba(139, 90, 43, 0.5);
+}
+
+/* Styling dropdown options */
+.modal-options select option {
+  background-color: #FFF8E1; /* Matches select background */
+  font-family: 'Libre Baskerville', serif;
+  color: #5C4033; /* Warm brown */
+  padding: 10px;
+}
+
+/* Add a shadow effect to the dropdown */
+.modal-options select:focus option {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Close Button */
+.close-modal {
+    color: #3E2723;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #EE7E1A; /* Muted orange for a warm touch */
+    transform: rotate(90deg); /* Elegant hover effect */
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    width: 50%;
+    display: block;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px auto 0;
+}
+
+.add-to-cart-btn:hover {
+    background: #7A3B0E;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+      /* Modal Styles */
+/* Modal container */
+#viewProofModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8); /* Dim background for focus */
+    z-index: 9999;
+    overflow: auto;
+    padding-top: 60px;
+}
+.modal-content {
+    background: linear-gradient(to bottom, #FFF5E1, #F7E0C0); /* Soft parchment gradient */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 60%;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Luxurious shadow */
+    border: 1px solid #8E5727; /* Muted gold border */
+    font-family: 'Playfair Display', serif; /* Vintage typography */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8E5727; /* Decorative border */
+    padding-bottom: 15px;
+}
+
+.modal-header h1 {
+    font-size: 2.5em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.modal-header h2 {
+    font-size: 2em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+     
+.modal-header .close {
+    color: #3E2723;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.modal-header .close:hover {
+    color: #EE7E1A; /* Muted orange for a warm touch */
+    transform: rotate(90deg); /* Elegant hover effect */
+}
+      /* Style for the image preview */
+      .image-preview {
+  width: 100%;
+  height: 500px; /* Adjustable size */
+  object-fit: cover;
+  border-radius: 15px; /* Rounded corners for elegance */
+  margin-top: 30px;
+  filter: sepia(0.7) brightness(1.1) contrast(1.2) saturate(0.8); /* Warm vintage effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Classic shadow for depth */
+  border: 4px solid rgba(255, 235, 205, 0.9); /* Subtle cream border */
+  background-color: #FFF5E1; /* Matches the vintage tone */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.image-preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 240, 220, 0.5),
+    rgba(200, 180, 150, 0.2)
+  ); /* Soft gradient overlay */
+  mix-blend-mode: soft-light; /* Enhances the vintage tones */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.button-container {
+  display: flex; /* Arrange buttons in a row */
+  gap: 10px; /* Add spacing between buttons */
+  justify-content: center; /* Center align buttons */
+  align-items: center; /* Align buttons vertically */
+}
+
+.approve-btn, .reject-btn {
+  width: auto; /* Adjust button width to content */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF; /* White text */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Button padding */
+  font-size: 14px; /* Text size */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+      .approve-btn:hover {
+         background-color: darkgreen;
+      }
+
+      .approve-btn {
+    background: linear-gradient(135deg, #C69B68, #A16D37); /* Warm, lighter brown gradient */
+    border: 2px solid #774816; /* Medium brown border */
+}
+
+      .reject-btn {
+         background: linear-gradient(135deg, #8E3A15, #5C1E09); /* Dark reddish-brown gradient */
+    border: 2px solid #4A1608; /* Deep red-brown border */
+      }
+
+      .reject-btn:hover {
+         background: linear-gradient(135deg, #A64520, #742312); /* Slightly brighter reddish-brown */
+    border-color: #5A1F0A; /* Brighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+      }
+
+      .approve-btn:hover {
+         background: linear-gradient(135deg, #E3B482, #B2774A); /* Brighter light brown gradient */
+    border-color: #8A5A23; /* Lighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+      }
+
+      /* Active state for Delete Button */
+.reject-btn:active {
+    background: #5C1E09; /* Dark solid brown for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Active state for Option Button */
+.approve-btn:active {
+    background: #7A4F22; /* Medium brown solid for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Focus state for both buttons */
+.approve-btn:focus, .approve-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(182, 125, 91, 0.8); /* Soft brown glow effect */
+}
+
+.approve-btn{
+    margin-bottom: 10px;
+
+}
+
+      /* Hover effect for proof receipt image */
+      .proof-container {
+         position: relative;
+         display: inline-block;
+      }
+
+      .view-proof-text {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         color: white;
+         background-color: rgba(0, 0, 0, 0.5);
+         padding: 10px 20px;
+         font-size: 16px;
+         display: none; /* Hidden by default */
+         cursor: pointer;
+      }
+
+      .proof-container:hover .view-proof-text {
+         display: block; /* Show text on hover */
+      }
+
+      .filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-container select {
+    padding: 12px 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #5D4037; /* light tan color */
+    background-color: #FEE8C5;
+    color: #4d3424; /* dark brown color */
+    transition: border-color 0.3s ease;
+    flex: 1;
+    max-width: 60%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.filter-container select:focus {
+   outline: none;
+   border-color: #d0b079; /* gold color */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.filter-container select:hover {
+    border-color: #d0b079; /* gold color */
+}
+
+.filter-container button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #8B4513; /* chocolate brown */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    border: 2px solid #5D4037; /* light tan color */
+
+}
+
+.filter-container button:hover {
+     background-color: #653411; /* darker chocolate brown */
+    transform: translateY(-2px);
+}
+
+.filter-container button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.filter-container input[type="date"] {
+  padding: 12px 15px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: 2px solid #5D4037;
+  background-color: #FFFFFF;
+  color: #4d3424;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+.filter-container input[type="date"]:focus {
+  outline: none;
+  border-color: #d0b079;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filter-container select {
+        font-size: 1em;
+        padding: 10px 12px;
+        max-width: 70%;
+    }
+    .filter-container button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+       --dark: #5D4037; /* Brown shade for sidebar and navbar */
+       --blue: #8E5727; /* Muted brown for accents */
+       --grey-light: #E8C595; /* Very light brown for alternating rows */
+       --main-bg: #E0E0E0; /* Updated gray for the main container */
+       --light: #FEE8C5; /* Light background color */
+       --yellow: #FFD54F; /* Yellow for status badges */
+       --orange: #FF8A65; /* Orange for status badges */
+       --white: #FEE8C5; /* White for text or backgrounds */
+       --grey:   #E8C595; /* Neutral grey for hover effects */
+   }
+
+/* Recent Transactions Section */
+.recent-transactions {
+   margin-top: 48px;
+}
+
+.recent-transactions h2 {
+   font-size: 24px;
+   font-weight: 600;
+   margin-bottom: 16px;
+   color: var(--dark);
+}
+
+.recent-transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #5C2E0A;
+    border: 2px solid #5C2E0A; /* Add border */
+}
+
+
+.recent-transactions table th, .recent-transactions table td {
+   padding: 12px;
+   text-align: center;
+   font-size: 14px;
+}
+
+.recent-transactions table th {
+   background-color: var(--blue);
+   color: #FFF3DC;
+   font-weight: bold;
+}
+
+.recent-transactions table td {
+   background-color: var(--white);
+}
+
+.recent-transactions table tr:nth-child(even) td {
+   background-color: var(--grey-light);
+}
+
+.recent-transactions table tr:hover {
+   background-color: var(--grey);
+}
+
+
+
+   /* Sidebar background color */
+   #sidebar {
+   background-color: #8E5727;
+}
+
+/* Sidebar link color */
+#sidebar a {
+   color: pink;
+}
+
+/* Sidebar active link color */
+#sidebar .active a {
+   background-color: #3E2723;
+}
+/* MAIN */
+/* CONTENT */
+
+/* General styles */
+
+/* General shared styles */
+a.delete-btn, a.option-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF; /* White text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Button padding */
+    font-size: 14px; /* Text size */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Specific styling for Delete Button */
+a.delete-btn {
+    background: linear-gradient(135deg, #8E3A15, #5C1E09); /* Dark reddish-brown gradient */
+    border: 2px solid #4A1608; /* Deep red-brown border */
+}
+
+/* Specific styling for Option Button */
+a.option-btn {
+    background: linear-gradient(135deg, #C69B68, #A16D37); /* Warm, lighter brown gradient */
+    border: 2px solid #774816; /* Medium brown border */
+}
+
+/* Icon styling inside buttons */
+a.delete-btn i, a.option-btn i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 16px; /* Icon size */
+}
+
+/* Hover effects for Delete Button */
+a.delete-btn:hover {
+    background: linear-gradient(135deg, #A64520, #742312); /* Slightly brighter reddish-brown */
+    border-color: #5A1F0A; /* Brighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Hover effects for Option Button */
+a.option-btn:hover {
+    background: linear-gradient(135deg, #E3B482, #B2774A); /* Brighter light brown gradient */
+    border-color: #8A5A23; /* Lighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Active state for Delete Button */
+a.delete-btn:active {
+    background: #5C1E09; /* Dark solid brown for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Active state for Option Button */
+a.option-btn:active {
+    background: #7A4F22; /* Medium brown solid for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Focus state for both buttons */
+a.delete-btn:focus, a.option-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(182, 125, 91, 0.8); /* Soft brown glow effect */
+}
+
+.option-btn{
+    margin-bottom: 10px;
+
+}
+
+/* MAIN */
+/* CONTENT */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 20px auto;
+   padding: 20px;
+}
+
+.products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.box {
+   background: linear-gradient(to bottom, #FFF5E1, #F7E0C0); /* Soft parchment gradient */
+   border: 1px solid #d2b89c; /* Subtle brown border */
+   border-radius: 15px;
+   overflow: hidden;
+   text-align: center;
+   padding: 15px;
+   transition: transform 0.3s, box-shadow 0.3s;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Luxurious shadow */
+   border: 1px solid #8E5727; /* Muted gold border */
+}
+
+.box:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+   border-radius: 8px;
+   margin-bottom: 15px;
+   border: 1px solid #d2b89c; /* Matches card border */
+}
+
+.box h3 {
+   font-size: 1.5rem;
+   color: #5e4632; /* Dark brown for headings */
+   margin-bottom: 10px;
+}
+
+.box p {
+   font-size: 1rem;
+   color: #7a5c45; /* Medium brown for descriptions */
+   margin-bottom: 8px;
+}
+
+.box .btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box .btn:hover {
+   background: #7A3B0E;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkout Button Container */
+.checkoutbtn {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.box .btn {
+   width: 100%;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box .btn:hover {
+    background: #7A3B0E;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkout Button Styling */
+.checkoutbtn .btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkoutbtn .btn:hover {
+    background: #7A3B0E;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled Button Styling */
+.checkoutbtn .btn.disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.checkoutbtn .btn.disabled:hover {
+  background: #ccc; /* Ensures no hover effect for disabled state */
+  transform: none;
+}
+
+/* Small Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .checkoutbtn .btn {
+        width: 90%; /* Slightly smaller width for better fit */
+        padding: 10px 16px; /* Reduce padding for compact design */
+        font-size: 1em; /* Smaller font size for readability */
+    }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .checkoutbtn .btn {
+        width: 100%; /* Full width for mobile screens */
+        padding: 8px 14px; /* Further reduce padding */
+        font-size: 0.9em; /* Smaller font size for tight spaces */
+    }
+
+    .checkoutbtn .btn:hover {
+        transform: none; /* Disable hover transform on small screens for simplicity */
+        box-shadow: none; /* Remove shadow on hover for minimalism */
+    }
+}
+
+/* Scoped Form Styling */
+.update-quantity-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.update-quantity-form input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.update-quantity-form input[type="number"]:focus {
+  border-color: #27ae60;
+}
+
+.update-quantity-form input[type="submit"] {
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #EE7E1A;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.update-quantity-form input[type="submit"]:hover {
+  background: #5C2E0A;
+  transform: translateY(-2px);
+}
+
+

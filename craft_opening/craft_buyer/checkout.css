@@ -1,0 +1,659 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+       --dark: #5D4037; /* Brown shade for sidebar and navbar */
+       --blue: #8E5727; /* Muted brown for accents */
+       --grey-light: #E8C595; /* Very light brown for alternating rows */
+       --main-bg: #E0E0E0; /* Updated gray for the main container */
+       --light: #FEE8C5; /* Light background color */
+       --yellow: #FFD54F; /* Yellow for status badges */
+       --orange: #FF8A65; /* Orange for status badges */
+       --white: #FEE8C5; /* White for text or backgrounds */
+       --grey:   #E8C595; /* Neutral grey for hover effects */
+   }
+
+/* Recent Transactions Section */
+.recent-transactions {
+   margin-top: 48px;
+}
+
+.recent-transactions h2 {
+   font-size: 24px;
+   font-weight: 600;
+   margin-bottom: 16px;
+   color: var(--dark);
+}
+
+.recent-transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #5C2E0A;
+    border: 2px solid #5C2E0A; /* Add border */
+}
+
+
+.recent-transactions table th, .recent-transactions table td {
+   padding: 12px;
+   text-align: center;
+   font-size: 14px;
+}
+
+.recent-transactions table th {
+   background-color: var(--blue);
+   color: #FFF3DC;
+   font-weight: bold;
+}
+
+.recent-transactions table td {
+   background-color: var(--white);
+}
+
+.recent-transactions table tr:nth-child(even) td {
+   background-color: var(--grey-light);
+}
+
+.recent-transactions table tr:hover {
+   background-color: var(--grey);
+}
+
+   /* Sidebar background color */
+   #sidebar {
+   background-color: #8E5727;
+}
+
+/* Sidebar link color */
+#sidebar a {
+   color: pink;
+}
+
+/* Sidebar active link color */
+#sidebar .active a {
+   background-color: #3E2723;
+}
+/* MAIN */
+/* CONTENT */
+
+/* General styles */
+
+/* General shared styles */
+a.delete-btn, a.option-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF; /* White text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Button padding */
+    font-size: 14px; /* Text size */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Specific styling for Delete Button */
+a.delete-btn {
+    background: linear-gradient(135deg, #8E3A15, #5C1E09); /* Dark reddish-brown gradient */
+    border: 2px solid #4A1608; /* Deep red-brown border */
+}
+
+/* Specific styling for Option Button */
+a.option-btn {
+    background: linear-gradient(135deg, #C69B68, #A16D37); /* Warm, lighter brown gradient */
+    border: 2px solid #774816; /* Medium brown border */
+}
+
+/* Icon styling inside buttons */
+a.delete-btn i, a.option-btn i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 16px; /* Icon size */
+}
+
+/* Hover effects for Delete Button */
+a.delete-btn:hover {
+    background: linear-gradient(135deg, #A64520, #742312); /* Slightly brighter reddish-brown */
+    border-color: #5A1F0A; /* Brighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Hover effects for Option Button */
+a.option-btn:hover {
+    background: linear-gradient(135deg, #E3B482, #B2774A); /* Brighter light brown gradient */
+    border-color: #8A5A23; /* Lighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Active state for Delete Button */
+a.delete-btn:active {
+    background: #5C1E09; /* Dark solid brown for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Active state for Option Button */
+a.option-btn:active {
+    background: #7A4F22; /* Medium brown solid for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Focus state for both buttons */
+a.delete-btn:focus, a.option-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(182, 125, 91, 0.8); /* Soft brown glow effect */
+}
+
+.option-btn{
+    margin-bottom: 10px;
+
+}
+
+:root {
+    --primary-color: #5D4037; /* Vintage dark brown */
+    --primary-gradient: linear-gradient(135deg, #5D4037, #4A3229);
+    --hover-gradient: linear-gradient(135deg, #6F5148, #4A3229);
+    --input-bg: #FFFFFF; /* Clean white background for inputs */
+    --input-border: #D3C4B1; /* Subtle beige for borders */
+    --input-focus-border: #5D4037; /* Dark brown for focus */
+    --font-color: #5D4037; /* Matching text color */
+    --placeholder-color: #A69485; /* Subtle vintage placeholder */
+    --background-color: #FDFBF8; /* Soft off-white for form background */
+}
+
+.container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: linear-gradient(to bottom, #FFF5E1, #F7E0C0);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            border: 1px solid #8E5727;
+        }
+
+        .container h3 {
+            font-size: 1.8em;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #8E5727;
+            padding-bottom: 10px;
+        }
+
+        label {
+            font-size: 1em;
+            color: var(--font-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .box {
+            width: 100%;
+            height: 40px;
+            padding: 8px 12px;
+            border: 1px solid #8E5727;
+            border-radius: 8px;
+            background-color: #FFF5E1;
+            font-size: 16px;
+            color: #3E2723;
+            margin-bottom: 20px;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .box::placeholder {
+            color: var(--placeholder-color);
+            font-style: italic;
+        }
+
+        .box:focus {
+            border-color: #D19A6B;
+            outline: none;
+            box-shadow: 0 0 8px rgba(93, 64, 55, 0.4);
+        }
+
+        .custom-file-input {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .custom-file-input label {
+            display: block;
+            background-color: #FFF5E1;
+            border: 1px solid #8E5727;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 16px;
+            color: #3E2723;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-style: italic;
+        }
+
+        .custom-file-input label:hover {
+            background-color: #F7E0C0;
+        }
+
+        .custom-file-input input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px 20px;
+            background: #5C2E0A;
+            border: none;
+            border-radius: 25px;
+            color: #FFFFFF;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #7A3B0E;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+.message{
+   position: sticky;
+   top:0; left:0;
+   z-index: 10000;
+   border-radius: .5rem;
+   background: #FFF4DE; /* Soft parchment gradient */
+   padding:1.5rem 2rem;
+   margin:0 auto;
+   max-width: 1200px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+   border: 1px solid #D2B48C; /* Light brown border for elegance */
+    transition: opacity 0.3s ease; /* Smooth transition for hiding */
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   color:var(--black);
+   cursor: pointer;
+}
+
+.message i:hover{
+   color:var(--red);
+}
+
+#content main .head-title .left .breadcrumb li a {
+	color: #5C2E0A;
+	pointer-events: none;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+   #sidebar {
+       width: 200px;
+   }
+
+   #content {
+       width: calc(100% - 60px);
+       left: 200px;
+   }
+
+   #content nav .nav-link {
+       display: none;
+   }
+}
+
+@media screen and (max-width: 576px) {
+   #content nav form .form-input input {
+       display: none;
+   }
+
+   #content nav form .form-input button {
+       width: auto;
+       height: auto;
+       background: transparent;
+       border-radius: none;
+       color: var(--dark);
+   }
+
+   #content nav form.show .form-input input {
+       display: block;
+       width: 100%;
+   }
+   #content nav form.show .form-input button {
+       width: 36px;
+       height: 100%;
+       border-radius: 0 36px 36px 0;
+       color: var(--light);
+       background: var(--red);
+   }
+
+   #content nav form.show ~ .notification,
+   #content nav form.show ~ .profile {
+       display: none;
+   }
+
+   #content main .box-info {
+       grid-template-columns: 1fr;
+   }
+
+   #content main .table-data .head {
+       min-width: 420px;
+   }
+   #content main .table-data .order table {
+       min-width: 420px;
+   }
+   #content main .table-data .todo .todo-list {
+       min-width: 420px;
+   }
+}
+
+/* Main container for the display order */
+.display-order {
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #faf3e0, #e4d7c5); /* Vintage parchment effect */
+    border: 1px solid #a08d74; /* Warm, aged border */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Cormorant Garamond', serif; /* Elegant serif font */
+}
+
+/* Styling for spans inside .display-order */
+.display-order > span {
+    display: flex; 
+    flex-grow: 1; 
+    flex-basis: 300px;
+    margin-bottom: 16px;
+    background-color: #FFF5E1; /* Soft vintage beige background */
+    border-radius: 10px;
+    padding: 14px 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-left: 10px solid #856547; /* Aged brown highlight */
+    font-size: 16px;
+    font-weight: bold;
+    color: #5C2E0A; /* Rich vintage text color */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle depth effect */
+    border: 1px solid #8E5727;
+    transition: all 0.3s ease;
+}
+
+/* Grand total container styling */
+.grand-total-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #e9dfcf;
+    border: 2px dashed #856547; /* Vintage dashed border */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(133, 101, 71, 0.2); /* Soft shadow for depth */
+}
+
+/* Grand total text styling */
+.grand-total {
+    font-weight: 700;
+    font-size: 22px;
+    color: #5D4037;
+    letter-spacing: 1px; /* Slight spacing for elegance */
+}
+
+/* Form layout for inputs */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Input box styling */
+.inputBox {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 0px;
+}
+
+.inputBox span{
+    color: #5D4037;
+}
+
+.inputBox select, .inputBox input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c4a78b; /* Subtle warm border */
+    border-radius: 8px;
+    font-size: 16px;
+    background: #FFF5E1;
+    color: #5D4037;
+    font-family: 'Cormorant Garamond', serif;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+}
+
+/* GCash Reference Box */
+#gcashReferenceBox {
+    margin-top: 10px;
+    color: #5D4037;
+}
+
+/* Button styling */
+
+/* GCash QR Code container */
+#gcashQrCodeContainer {
+    text-align: center;
+}
+
+#gcashQrCodeContainer img {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #856547;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #faf3e0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* General mobile-first approach */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .container h3 {
+        font-size: 1.5em;
+    }
+
+    .box {
+        height: auto;
+        font-size: 14px;
+    }
+
+    .custom-file-input label {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .display-order > span {
+        flex-direction: column;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .grand-total {
+        font-size: 18px;
+    }
+
+    .inputBox {
+        flex: 1 1 100%;
+    }
+
+    #gcashQrCodeContainer img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Small devices (phones) */
+@media screen and (max-width: 480px) {
+    .container h3 {
+        font-size: 1.2em;
+    }
+
+    .custom-file-input label {
+        padding: 6px 8px;
+    }
+
+    .btn {
+        font-size: 0.9em;
+    }
+
+    .display-order > span {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .grand-total {
+        font-size: 16px;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .display-order > span {
+        font-size: 18px;
+    }
+
+    .grand-total {
+        font-size: 24px;
+    }
+
+    #gcashQrCodeContainer img {
+        width: 400px;
+    }
+}
+
+/* Modal container with overlay */
+.order-message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed position to overlay over content */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    z-index: 9999; /* Ensure it appears above other content */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.order-message-container .message-container {
+    background: linear-gradient(to bottom, #f5e6d2, #d2b48c); /* Elegant gradient of light browns */
+    border-radius: 15px; /* Rounded edges for elegance */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    text-align: center;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    color: #5c4033; /* Dark brown text color */
+    font-family: 'Georgia', serif;
+}
+
+/* Heading */
+.order-message-container .message-container h3 {
+    font-size: 28px;
+    color: #8b4513; /* SaddleBrown for headings */
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.order-message-container .message-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #5c4033;
+}
+
+/* Button */
+.order-message-container .message-container .btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.order-message-container .message-container .btn:hover {
+    background: #7A3B0E;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-message-container .message-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .order-message-container .message-container h3 {
+        font-size: 24px;
+    }
+
+    .order-message-container .message-container p {
+        font-size: 16px;
+    }
+
+    .order-message-container .message-container .btn {
+        font-size: 1em; /* Adjust font size for medium screens */
+        padding: 10px 18px; /* Slightly smaller padding */
+        border-radius: 20px; /* Adjust border radius for smaller buttons */
+}
+
+}
+
+@media (max-width: 480px) {
+    .order-message-container .message-container .btn {
+        font-size: 0.9em; /* Further adjust font size for smaller screens */
+        padding: 8px 16px; /* Compact padding */
+        border-radius: 18px; /* Smaller border radius */
+    }
+}

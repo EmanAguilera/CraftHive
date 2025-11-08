@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+       --dark: #5D4037; /* Brown shade for sidebar and navbar */
+       --blue: #8E5727; /* Muted brown for accents */
+       --grey-light: #E8C595; /* Very light brown for alternating rows */
+       --main-bg: #E0E0E0; /* Updated gray for the main container */
+       --light: #FEE8C5; /* Light background color */
+       --yellow: #FFD54F; /* Yellow for status badges */
+       --orange: #FF8A65; /* Orange for status badges */
+       --white: #FEE8C5; /* White for text or backgrounds */
+       --grey:   #E8C595; /* Neutral grey for hover effects */
+   }
+
+/* Recent Transactions Section */
+.recent-transactions {
+   margin-top: 48px;
+}
+
+.recent-transactions h2 {
+   font-size: 24px;
+   font-weight: 600;
+   margin-bottom: 16px;
+   color: var(--dark);
+}
+
+.recent-transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #5C2E0A;
+    border: 2px solid #5C2E0A; /* Add border */
+}
+
+
+.recent-transactions table th, .recent-transactions table td {
+   padding: 12px;
+   text-align: center;
+   font-size: 14px;
+}
+
+.recent-transactions table th {
+   background-color: var(--blue);
+   color: #FFF3DC;
+   font-weight: bold;
+}
+
+.recent-transactions table td {
+   background-color: var(--white);
+}
+
+.recent-transactions table tr:nth-child(even) td {
+   background-color: var(--grey-light);
+}
+
+.recent-transactions table tr:hover {
+   background-color: var(--grey);
+}
+
+   /* Sidebar background color */
+   #sidebar {
+   background-color: #8E5727;
+}
+
+/* Sidebar link color */
+#sidebar a {
+   color: pink;
+}
+
+/* Sidebar active link color */
+#sidebar .active a {
+   background-color: #3E2723;
+}
+/* MAIN */
+/* CONTENT */
+
+/* General styles */
+
+/* General shared styles */
+a.delete-btn, a.option-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF; /* White text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Button padding */
+    font-size: 14px; /* Text size */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Specific styling for Delete Button */
+a.delete-btn {
+    background: linear-gradient(135deg, #8E3A15, #5C1E09); /* Dark reddish-brown gradient */
+    border: 2px solid #4A1608; /* Deep red-brown border */
+}
+
+/* Specific styling for Option Button */
+a.option-btn {
+    background: linear-gradient(135deg, #C69B68, #A16D37); /* Warm, lighter brown gradient */
+    border: 2px solid #774816; /* Medium brown border */
+}
+
+/* Icon styling inside buttons */
+a.delete-btn i, a.option-btn i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 16px; /* Icon size */
+}
+
+/* Hover effects for Delete Button */
+a.delete-btn:hover {
+    background: linear-gradient(135deg, #A64520, #742312); /* Slightly brighter reddish-brown */
+    border-color: #5A1F0A; /* Brighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Hover effects for Option Button */
+a.option-btn:hover {
+    background: linear-gradient(135deg, #E3B482, #B2774A); /* Brighter light brown gradient */
+    border-color: #8A5A23; /* Lighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Active state for Delete Button */
+a.delete-btn:active {
+    background: #5C1E09; /* Dark solid brown for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Active state for Option Button */
+a.option-btn:active {
+    background: #7A4F22; /* Medium brown solid for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Focus state for both buttons */
+a.delete-btn:focus, a.option-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(182, 125, 91, 0.8); /* Soft brown glow effect */
+}
+
+.option-btn{
+    margin-bottom: 10px;
+
+}
+
+:root {
+    --primary-color: #5D4037; /* Vintage dark brown */
+    --primary-gradient: linear-gradient(135deg, #5D4037, #4A3229);
+    --hover-gradient: linear-gradient(135deg, #6F5148, #4A3229);
+    --input-bg: #FFFFFF; /* Clean white background for inputs */
+    --input-border: #D3C4B1; /* Subtle beige for borders */
+    --input-focus-border: #5D4037; /* Dark brown for focus */
+    --font-color: #5D4037; /* Matching text color */
+    --placeholder-color: #A69485; /* Subtle vintage placeholder */
+    --background-color: #FDFBF8; /* Soft off-white for form background */
+}
+
+        .container h3 {
+            font-size: 1.8em;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #8E5727;
+            padding-bottom: 10px;
+        }
+
+        label {
+            font-size: 1em;
+            color: var(--font-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .box {
+            width: 100%;
+            height: 40px;
+            padding: 8px 12px;
+            border: 1px solid #8E5727;
+            border-radius: 8px;
+            background-color: #FFF5E1;
+            font-size: 16px;
+            color: #3E2723;
+            margin-bottom: 20px;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .box::placeholder {
+            color: var(--placeholder-color);
+            font-style: italic;
+        }
+
+        .box:focus {
+            border-color: #D19A6B;
+            outline: none;
+            box-shadow: 0 0 8px rgba(93, 64, 55, 0.4);
+        }
+
+        .custom-file-input {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .custom-file-input label {
+            display: block;
+            background-color: #FFF5E1;
+            border: 1px solid #8E5727;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 16px;
+            color: #3E2723;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-style: italic;
+        }
+
+        .custom-file-input label:hover {
+            background-color: #F7E0C0;
+        }
+
+        .custom-file-input input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px 20px;
+            background: #5C2E0A;
+            border: none;
+            border-radius: 25px;
+            color: #FFFFFF;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:focus,
+        .btn:hover {
+            background: #7A3B0E;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+.message{
+   position: sticky;
+   top:0; left:0;
+   z-index: 10000;
+   border-radius: .5rem;
+   background: #FFF4DE; /* Soft parchment gradient */
+   padding:1.5rem 2rem;
+   margin:0 auto;
+   max-width: 1200px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+   border: 1px solid #D2B48C; /* Light brown border for elegance */
+    transition: opacity 0.3s ease; /* Smooth transition for hiding */
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   color:var(--black);
+   cursor: pointer;
+}
+
+.message i:hover{
+   color:var(--red);
+}
+
+#content main .head-title .left .breadcrumb li a {
+	color: #5C2E0A;
+	pointer-events: none;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+   #sidebar {
+       width: 200px;
+   }
+
+   #content {
+       width: calc(100% - 60px);
+       left: 200px;
+   }
+
+   #content nav .nav-link {
+       display: none;
+   }
+}
+
+@media screen and (max-width: 576px) {
+   #content nav form .form-input input {
+       display: none;
+   }
+
+   #content nav form .form-input button {
+       width: auto;
+       height: auto;
+       background: transparent;
+       border-radius: none;
+       color: var(--dark);
+   }
+
+   #content nav form.show .form-input input {
+       display: block;
+       width: 100%;
+   }
+   #content nav form.show .form-input button {
+       width: 36px;
+       height: 100%;
+       border-radius: 0 36px 36px 0;
+       color: var(--light);
+       background: var(--red);
+   }
+
+   #content nav form.show ~ .notification,
+   #content nav form.show ~ .profile {
+       display: none;
+   }
+
+   #content main .box-info {
+       grid-template-columns: 1fr;
+   }
+
+   #content main .table-data .head {
+       min-width: 420px;
+   }
+   #content main .table-data .order table {
+       min-width: 420px;
+   }
+   #content main .table-data .todo .todo-list {
+       min-width: 420px;
+   }
+}
+
+.button-group {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between buttons */
+    gap: 10px;
+    margin-top: 10px; /* Space above the button group */
+}
+
+.button-group .btn {
+    flex: 1; /* Allow buttons to grow equally */
+    text-align: center;
+   
+}
+
+.button-group .btn:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+
+.container {
+    max-width: 1200px;
+
+}
+
+h1 {
+    text-align: left;
+    color: #8B4513; /* SaddleBrown */
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #5C4033; /* Dark Brown */
+}
+
+.chart-container {
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+}
+
+.pie-chart-container canvas {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.chart-container canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.back-btn {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #D2691E; /* Chocolate */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #A0522D; /* Sienna */
+}
+
+/* Buttons Styles */
+.report-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.report-buttons button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #D2B48C; /* Tan */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.report-buttons button:hover {
+    background-color: #BC8F8F; /* Rosy Brown */
+}
+
+.export-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.export-buttons button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.export-buttons button:hover {
+    background-color: #A0522D; /* Sienna */
+}
+
+@media (max-width: 768px) {
+    .info {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        width: 100%;
+    }
+}
+
+     /* Modal Styles */
+/* Modal container */
+#viewProofModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8); /* Dim background for focus */
+    z-index: 9999;
+    overflow: auto;
+    padding-top: 60px;
+}
+.modal-content {
+    background: linear-gradient(to bottom, #FFF5E1, #F7E0C0); /* Soft parchment gradient */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 60%;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Luxurious shadow */
+    border: 1px solid #8E5727; /* Muted gold border */
+    font-family: 'Playfair Display', serif; /* Vintage typography */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8E5727; /* Decorative border */
+    padding-bottom: 15px;
+}
+
+.modal-header h1 {
+    font-size: 2.5em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.modal-header h2 {
+    font-size: 2em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+     
+.modal-header .close {
+    color: #3E2723;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.modal-header .close:hover {
+    color: #EE7E1A; /* Muted orange for a warm touch */
+    transform: rotate(90deg); /* Elegant hover effect */
+}
+      /* Style for the image preview */
+      .image-preview {
+  width: 100%;
+  height: 500px; /* Adjustable size */
+  object-fit: cover;
+  border-radius: 15px; /* Rounded corners for elegance */
+  margin-top: 30px;
+  filter: sepia(0.7) brightness(1.1) contrast(1.2) saturate(0.8); /* Warm vintage effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Classic shadow for depth */
+  border: 4px solid rgba(255, 235, 205, 0.9); /* Subtle cream border */
+  background-color: #FFF5E1; /* Matches the vintage tone */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.image-preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 240, 220, 0.5),
+    rgba(200, 180, 150, 0.2)
+  ); /* Soft gradient overlay */
+  mix-blend-mode: soft-light; /* Enhances the vintage tones */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.button-container {
+  display: flex; /* Arrange buttons in a row */
+  gap: 10px; /* Add spacing between buttons */
+  justify-content: center; /* Center align buttons */
+  align-items: center; /* Align buttons vertically */
+}
+
+.approve-btn, .reject-btn {
+  width: auto; /* Adjust button width to content */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF; /* White text */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Button padding */
+  font-size: 14px; /* Text size */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+      .approve-btn:hover {
+         background-color: darkgreen;
+      }
+
+      .approve-btn {
+    background: linear-gradient(135deg, #C69B68, #A16D37); /* Warm, lighter brown gradient */
+    border: 2px solid #774816; /* Medium brown border */
+}
+
+      .reject-btn {
+         background: linear-gradient(135deg, #8E3A15, #5C1E09); /* Dark reddish-brown gradient */
+    border: 2px solid #4A1608; /* Deep red-brown border */
+      }
+
+      .reject-btn:hover {
+         background: linear-gradient(135deg, #A64520, #742312); /* Slightly brighter reddish-brown */
+    border-color: #5A1F0A; /* Brighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+      }
+
+      .approve-btn:hover {
+         background: linear-gradient(135deg, #E3B482, #B2774A); /* Brighter light brown gradient */
+    border-color: #8A5A23; /* Lighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+      }
+
+      /* Active state for Delete Button */
+.reject-btn:active {
+    background: #5C1E09; /* Dark solid brown for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Active state for Option Button */
+.approve-btn:active {
+    background: #7A4F22; /* Medium brown solid for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Focus state for both buttons */
+.approve-btn:focus, .approve-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(182, 125, 91, 0.8); /* Soft brown glow effect */
+}
+
+.approve-btn{
+    margin-bottom: 10px;
+
+}
+
+      /* Hover effect for proof receipt image */
+      .proof-container {
+         position: relative;
+         display: inline-block;
+      }
+
+      .view-proof-text {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         color: white;
+         background-color: rgba(0, 0, 0, 0.5);
+         padding: 10px 20px;
+         font-size: 16px;
+         display: none; /* Hidden by default */
+         cursor: pointer;
+      }
+
+      .proof-container:hover .view-proof-text {
+         display: block; /* Show text on hover */
+      }
+
+      .filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-container select {
+    padding: 12px 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #5D4037; /* light tan color */
+    background-color: #FEE8C5;
+    color: #4d3424; /* dark brown color */
+    transition: border-color 0.3s ease;
+    flex: 1;
+    max-width: 60%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.filter-container select:focus {
+   outline: none;
+   border-color: #d0b079; /* gold color */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.filter-container select:hover {
+    border-color: #d0b079; /* gold color */
+}
+
+.filter-container button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #8B4513; /* chocolate brown */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    border: 2px solid #5D4037; /* light tan color */
+
+}
+
+.filter-container button:hover {
+     background-color: #653411; /* darker chocolate brown */
+    transform: translateY(-2px);
+}
+
+.filter-container button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filter-container select {
+        font-size: 1em;
+        padding: 10px 12px;
+        max-width: 70%;
+    }
+    .filter-container button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+.input-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom, #FFF5E1, #F7E0C0);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid #8E5727;
+}
+
+.input-container h3 {
+    font-size: 1.8em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #8E5727;
+    padding-bottom: 10px;
+}
+
+.input-container label {
+    font-size: 1em;
+    color: var(--font-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.box {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #8E5727;
+    border-radius: 8px;
+    background-color: #FFF5E1;
+    font-size: 16px;
+    color: #3E2723;
+    margin-bottom: 20px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.box::placeholder {
+    color: var(--placeholder-color);
+    font-style: italic;
+}
+
+.box:focus {
+    border-color: #D19A6B;
+    outline: none;
+    box-shadow: 0 0 8px rgba(93, 64, 55, 0.4);
+}
+
+.custom-file-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.custom-file-input label {
+    display: block;
+    background-color: #FFF5E1;
+    border: 1px solid #8E5727;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #3E2723;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-style: italic;
+}
+
+.custom-file-input label:hover {
+    background-color: #F7E0C0;
+}
+
+.custom-file-input input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #5C2E0A;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #7A3B0E;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

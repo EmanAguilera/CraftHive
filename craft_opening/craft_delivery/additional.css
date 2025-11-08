@@ -1,0 +1,955 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+   --dark: #5D4037; /* Brown shade for sidebar and navbar */
+   --blue: #8E5727; /* Muted brown for accents */
+   --grey-light: #E8C595; /* Very light brown for alternating rows */
+   --main-bg: #E0E0E0; /* Updated gray for the main container */
+   --light: #FEE8C5; /* Light background color */
+   --yellow: #FFD54F; /* Yellow for status badges */
+   --orange: #FF8A65; /* Orange for status badges */
+   --white: #FEE8C5; /* White for text or backgrounds */
+   --grey:   #E8C595; /* Neutral grey for hover effects */
+}
+
+/* Recent Transactions Section */
+.recent-transactions {
+margin-top: 48px;
+}
+
+.recent-transactions h2 {
+font-size: 24px;
+font-weight: 600;
+margin-bottom: 16px;
+color: var(--dark);
+}
+
+.recent-transactions table {
+width: 100%;
+border-collapse: collapse;
+border-radius: 10px;
+overflow: hidden;
+background-color: #5C2E0A;
+border: 2px solid #5C2E0A; /* Add border */
+}
+
+
+.recent-transactions table th, .recent-transactions table td {
+padding: 12px;
+text-align: center;
+font-size: 14px;
+}
+
+.recent-transactions table th {
+background-color: var(--blue);
+color: #FFF3DC;
+font-weight: bold;
+}
+
+.recent-transactions table td {
+background-color: var(--white);
+}
+
+.recent-transactions table tr:nth-child(even) td {
+background-color: var(--grey-light);
+}
+
+.recent-transactions table tr:hover {
+background-color: var(--grey);
+}
+
+/* Sidebar background color */
+#sidebar {
+background-color: #8E5727;
+}
+
+/* Sidebar link color */
+#sidebar a {
+color: pink;
+}
+
+/* Sidebar active link color */
+#sidebar .active a {
+background-color: #3E2723;
+}
+/* MAIN */
+/* CONTENT */
+
+/* General styles */
+
+/* General shared styles */
+a.delete-btn, a.option-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+color: #FFF; /* White text */
+border-radius: 8px; /* Rounded corners */
+padding: 10px 20px; /* Button padding */
+font-size: 14px; /* Text size */
+font-weight: bold; /* Bold text */
+text-decoration: none; /* Remove underline */
+cursor: pointer; /* Pointer cursor on hover */
+transition: all 0.3s ease-in-out; /* Smooth hover effects */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Specific styling for Delete Button */
+a.delete-btn {
+background: linear-gradient(135deg, #8E3A15, #5C1E09); /* Dark reddish-brown gradient */
+border: 2px solid #4A1608; /* Deep red-brown border */
+}
+
+/* Specific styling for Option Button */
+a.option-btn {
+background: linear-gradient(135deg, #C69B68, #A16D37); /* Warm, lighter brown gradient */
+border: 2px solid #774816; /* Medium brown border */
+}
+
+/* Icon styling inside buttons */
+a.delete-btn i, a.option-btn i {
+margin-right: 8px; /* Space between icon and text */
+font-size: 16px; /* Icon size */
+}
+
+/* Hover effects for Delete Button */
+a.delete-btn:hover {
+background: linear-gradient(135deg, #A64520, #742312); /* Slightly brighter reddish-brown */
+border-color: #5A1F0A; /* Brighter border */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Hover effects for Option Button */
+a.option-btn:hover {
+background: linear-gradient(135deg, #E3B482, #B2774A); /* Brighter light brown gradient */
+border-color: #8A5A23; /* Lighter border */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Active state for Delete Button */
+a.delete-btn:active {
+background: #5C1E09; /* Dark solid brown for active state */
+transform: scale(0.98); /* Slightly shrink on click */
+box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Active state for Option Button */
+a.option-btn:active {
+background: #7A4F22; /* Medium brown solid for active state */
+transform: scale(0.98); /* Slightly shrink on click */
+box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Focus state for both buttons */
+a.delete-btn:focus, a.option-btn:focus {
+outline: none; /* Remove default outline */
+box-shadow: 0 0 8px rgba(182, 125, 91, 0.8); /* Soft brown glow effect */
+}
+
+.option-btn{
+margin-bottom: 10px;
+
+}
+
+:root {
+--primary-color: #5D4037; /* Vintage dark brown */
+--primary-gradient: linear-gradient(135deg, #5D4037, #4A3229);
+--hover-gradient: linear-gradient(135deg, #6F5148, #4A3229);
+--input-bg: #FFFFFF; /* Clean white background for inputs */
+--input-border: #D3C4B1; /* Subtle beige for borders */
+--input-focus-border: #5D4037; /* Dark brown for focus */
+--font-color: #5D4037; /* Matching text color */
+--placeholder-color: #A69485; /* Subtle vintage placeholder */
+--background-color: #FDFBF8; /* Soft off-white for form background */
+}
+
+.container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        background: linear-gradient(to bottom, #FFF5E1, #F7E0C0);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        border: 1px solid #8E5727;
+    }
+
+    .container h3 {
+        font-size: 1.8em;
+        text-align: center;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #8E5727;
+        padding-bottom: 10px;
+    }
+
+    label {
+        font-size: 1em;
+        color: var(--font-color);
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .box {
+        width: 100%;
+        height: 40px;
+        padding: 8px 12px;
+        border: 1px solid #8E5727;
+        border-radius: 8px;
+        background-color: #FFF5E1;
+        font-size: 16px;
+        color: #3E2723;
+        margin-bottom: 20px;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .box::placeholder {
+        color: var(--placeholder-color);
+        font-style: italic;
+    }
+
+    .box:focus {
+        border-color: #D19A6B;
+        outline: none;
+        box-shadow: 0 0 8px rgba(93, 64, 55, 0.4);
+    }
+
+    .custom-file-input {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .custom-file-input label {
+        display: block;
+        background-color: #FFF5E1;
+        border: 1px solid #8E5727;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 16px;
+        color: #3E2723;
+        text-align: left;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-style: italic;
+    }
+
+    .custom-file-input label:hover {
+        background-color: #F7E0C0;
+    }
+
+    .custom-file-input input[type="file"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+        background: #5C2E0A;
+        border: none;
+        border-radius: 25px;
+        color: #FFFFFF;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #7A3B0E;
+        transform: scale(1.02);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+.message{
+position: sticky;
+top:0; left:0;
+z-index: 10000;
+border-radius: .5rem;
+background: #FFF4DE; /* Soft parchment gradient */
+padding:1.5rem 2rem;
+margin:0 auto;
+max-width: 1200px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap:1.5rem;
+border: 1px solid #D2B48C; /* Light brown border for elegance */
+transition: opacity 0.3s ease; /* Smooth transition for hiding */
+}
+
+.message span{
+font-size: 2rem;
+color:var(--black);
+}
+
+.message i{
+font-size: 2.5rem;
+color:var(--black);
+cursor: pointer;
+}
+
+.message i:hover{
+color:var(--red);
+}
+
+#content main .head-title .left .breadcrumb li a {
+color: #5C2E0A;
+pointer-events: none;
+font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+#sidebar {
+   width: 200px;
+}
+
+#content {
+   width: calc(100% - 60px);
+   left: 200px;
+}
+
+#content nav .nav-link {
+   display: none;
+}
+}
+
+@media screen and (max-width: 576px) {
+#content nav form .form-input input {
+   display: none;
+}
+
+#content nav form .form-input button {
+   width: auto;
+   height: auto;
+   background: transparent;
+   border-radius: none;
+   color: var(--dark);
+}
+
+#content nav form.show .form-input input {
+   display: block;
+   width: 100%;
+}
+#content nav form.show .form-input button {
+   width: 36px;
+   height: 100%;
+   border-radius: 0 36px 36px 0;
+   color: var(--light);
+   background: var(--red);
+}
+
+#content nav form.show ~ .notification,
+#content nav form.show ~ .profile {
+   display: none;
+}
+
+#content main .box-info {
+   grid-template-columns: 1fr;
+}
+
+#content main .table-data .head {
+   min-width: 420px;
+}
+#content main .table-data .order table {
+   min-width: 420px;
+}
+#content main .table-data .todo .todo-list {
+   min-width: 420px;
+}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+       --dark: #5D4037; /* Brown shade for sidebar and navbar */
+       --blue: #8E5727; /* Muted brown for accents */
+       --grey-light: #E8C595; /* Very light brown for alternating rows */
+       --main-bg: #E0E0E0; /* Updated gray for the main container */
+       --light: #FEE8C5; /* Light background color */
+       --yellow: #FFD54F; /* Yellow for status badges */
+       --orange: #FF8A65; /* Orange for status badges */
+       --white: #FEE8C5; /* White for text or backgrounds */
+       --grey:   #E8C595; /* Neutral grey for hover effects */
+   }
+
+/* Recent Transactions Section */
+.recent-transactions {
+   margin-top: 48px;
+}
+
+.recent-transactions h2 {
+   font-size: 24px;
+   font-weight: 600;
+   margin-bottom: 16px;
+   color: var(--dark);
+}
+
+.recent-transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #5C2E0A;
+    border: 2px solid #5C2E0A; /* Add border */
+}
+
+
+.recent-transactions table th, .recent-transactions table td {
+   padding: 12px;
+   text-align: center;
+   font-size: 14px;
+}
+
+.recent-transactions table th {
+   background-color: var(--blue);
+   color: #FFF3DC;
+   font-weight: bold;
+}
+
+.recent-transactions table td {
+   background-color: var(--white);
+}
+
+.recent-transactions table tr:nth-child(even) td {
+   background-color: var(--grey-light);
+}
+
+.recent-transactions table tr:hover {
+   background-color: var(--grey);
+}
+
+   /* Sidebar background color */
+   #sidebar {
+   background-color: #8E5727;
+}
+
+/* Sidebar link color */
+#sidebar a {
+   color: pink;
+}
+
+/* Sidebar active link color */
+#sidebar .active a {
+   background-color: #3E2723;
+}
+/* MAIN */
+/* CONTENT */
+
+
+:root {
+    --primary-color: #5D4037; /* Vintage dark brown */
+    --primary-gradient: linear-gradient(135deg, #5D4037, #4A3229);
+    --hover-gradient: linear-gradient(135deg, #6F5148, #4A3229);
+    --input-bg: #FFFFFF; /* Clean white background for inputs */
+    --input-border: #D3C4B1; /* Subtle beige for borders */
+    --input-focus-border: #5D4037; /* Dark brown for focus */
+    --font-color: #5D4037; /* Matching text color */
+    --placeholder-color: #A69485; /* Subtle vintage placeholder */
+    --background-color: #FDFBF8; /* Soft off-white for form background */
+}
+
+.container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: linear-gradient(to bottom, #FFF5E1, #F7E0C0);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            border: 1px solid #8E5727;
+        }
+
+        .container h3 {
+            font-size: 1.8em;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #8E5727;
+            padding-bottom: 10px;
+        }
+
+        label {
+            font-size: 1em;
+            color: var(--font-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .box {
+            width: 100%;
+            height: 40px;
+            padding: 8px 12px;
+            border: 1px solid #8E5727;
+            border-radius: 8px;
+            background-color: #FFF5E1;
+            font-size: 16px;
+            color: #3E2723;
+            margin-bottom: 20px;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .box::placeholder {
+            color: var(--placeholder-color);
+            font-style: italic;
+        }
+
+        .box:focus {
+            border-color: #D19A6B;
+            outline: none;
+            box-shadow: 0 0 8px rgba(93, 64, 55, 0.4);
+        }
+
+        .custom-file-input {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .custom-file-input label {
+            display: block;
+            background-color: #FFF5E1;
+            border: 1px solid #8E5727;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 16px;
+            color: #3E2723;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-style: italic;
+        }
+
+        .custom-file-input label:hover {
+            background-color: #F7E0C0;
+        }
+
+        .custom-file-input input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+
+.message{
+   position: sticky;
+   top:0; left:0;
+   z-index: 10000;
+   border-radius: .5rem;
+   background: #FFF4DE; /* Soft parchment gradient */
+   padding:1.5rem 2rem;
+   margin:0 auto;
+   max-width: 1200px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+   border: 1px solid #D2B48C; /* Light brown border for elegance */
+    transition: opacity 0.3s ease; /* Smooth transition for hiding */
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   color:var(--black);
+   cursor: pointer;
+}
+
+.message i:hover{
+   color:var(--red);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+   .message {
+        padding: 1rem 1.5rem; /* Reduced padding */
+        gap: 1rem;
+    }
+
+    .message span{
+        font-size: 1.6rem; /* Reduced font size for text */
+    }
+
+    .message i{
+        font-size: 2rem; /* Reduced icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .message {
+        padding: 0.8rem 1.2rem; /* Further reduced padding */
+        gap: 0.8rem;
+    }
+
+    .message span{
+        font-size: 1.4rem; /* Further reduced text size */
+    }
+
+    .message i{
+        font-size: 1.7rem;  /* Further reduced icon size */
+    }
+}
+
+#content main .head-title .left .breadcrumb li a {
+	color: #5C2E0A;
+	pointer-events: none;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+   #sidebar {
+       width: 200px;
+   }
+
+   #content {
+       width: calc(100% - 60px);
+       left: 200px;
+   }
+
+   #content nav .nav-link {
+       display: none;
+   }
+}
+
+@media screen and (max-width: 576px) {
+   #content nav form .form-input input {
+       display: none;
+   }
+
+   #content nav form .form-input button {
+       width: auto;
+       height: auto;
+       background: transparent;
+       border-radius: none;
+       color: var(--dark);
+   }
+
+   #content nav form.show .form-input input {
+       display: block;
+       width: 100%;
+   }
+   #content nav form.show .form-input button {
+       width: 36px;
+       height: 100%;
+       border-radius: 0 36px 36px 0;
+       color: var(--light);
+       background: var(--red);
+   }
+
+   #content nav form.show ~ .notification,
+   #content nav form.show ~ .profile {
+       display: none;
+   }
+
+   #content main .box-info {
+       grid-template-columns: 1fr;
+   }
+
+   #content main .table-data .head {
+       min-width: 420px;
+   }
+   #content main .table-data .order table {
+       min-width: 420px;
+   }
+   #content main .table-data .todo .todo-list {
+       min-width: 420px;
+   }
+}
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8); /* Dim background for focus */
+    z-index: 9999;
+    overflow: auto;
+    padding-top: 60px;
+    }
+
+    .modal-content {
+      background: linear-gradient(to bottom, #FFF5E1, #F7E0C0); /* Soft parchment gradient */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 60%;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Luxurious shadow */
+    border: 1px solid #8E5727; /* Muted gold border */
+    font-family: 'Playfair Display', serif; /* Vintage typography */
+    position: relative;
+    overflow: hidden;
+    }
+
+    /* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8E5727; /* Decorative border */
+    padding-bottom: 15px;
+    margin-bottom: 20px; /* Space between preview and button */
+}
+
+.modal-header h1 {
+    font-size: 2.5em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.modal-header h2 {
+    font-size: 2em;
+    color: #3E2723; /* Rich brown */
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+    .close-btn {
+      color: #3E2723;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .close-btn:hover,
+    .close-btn:focus {
+       color: #EE7E1A; /* Muted orange for a warm touch */
+    transform: rotate(90deg); /* Elegant hover effect */
+    }
+/* Style for the image preview square placeholder with a vintage abstract feel */
+.image-preview-placeholder {
+    width: 100%;
+    height: 200px; /* Set height to make it a square */
+    background: linear-gradient(135deg, #d9c6a3, #bfa282), /* Muted vintage colors */
+                url('https://www.transparenttextures.com/patterns/crossword.png'); /* Textured pattern */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #a39472; /* Muted brown for vintage border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    border-radius: 8px; /* Slightly rounded corners for a polished look */
+    font-family: 'Courier New', Courier, monospace; /* Retro font style */
+    color: #7a6a50; /* Muted text color */
+    font-size: 14px;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.4); /* Subtle text shadow for depth */
+}
+
+/* Image preview styling with vintage tones */
+.image-preview {
+    display: none;
+    width: 100%;
+    height: 500px; /* Ensure preview also matches the size */
+    object-fit: cover; /* Ensure the image fills the square */
+    border-radius: 8px; /* Rounded corners to match placeholder */
+    filter: sepia(0.5) contrast(1); /* Apply vintage filter effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Depth with shadows */
+}
+
+/* Hover effect on the placeholder for interactivity */
+.image-preview-placeholder:hover {
+    background: linear-gradient(135deg, #bfa282, #d9c6a3),
+                url('https://www.transparenttextures.com/patterns/arches.png'); /* Hover texture */
+    border-color: #8e7354; /* Darker border on hover */
+    transition: all 0.3s ease-in-out; /* Smooth hover transition */
+    cursor: pointer; /* Indicate interactivity */
+}
+
+
+
+    /* Style to hide file input button */
+    #file-input {
+       display: none;
+    }
+
+    *::before,
+*::after {
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width/height */
+}
+
+/* General shared styles */
+.option-btn, .upload-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit; /* Use the same font-family as the parent */
+    line-height: 1; /* Ensure consistent line-height */
+    color: #FFF; /* White text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Consistent text size */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-right: 10px; /* Space between buttons */
+    box-sizing: border-box; /* Ensure padding and border are included in the size */
+}
+
+/* Rest of the styles (specific to buttons) */
+.upload-btn {
+    background: linear-gradient(135deg, #8E3A15, #5C1E09);
+    border: 2px solid #4A1608;
+}
+
+.option-btn {
+    background: linear-gradient(135deg, #C69B68, #A16D37);
+    border: 2px solid #774816;
+}
+
+.button-row {
+    display: flex; /* Enable Flexbox */
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 50px; /* Adjust height as needed for vertical centering */
+    margin-top: 20px; /* Optional spacing from other elements */
+}
+
+/* Icon styling inside buttons */
+.upload-btn i, .option-btn i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 16px; /* Icon size */
+}
+
+/* Hover effects for Delete Button */
+.upload-btn:hover {
+    background: linear-gradient(135deg, #A64520, #742312); /* Slightly brighter reddish-brown */
+    border-color: #5A1F0A; /* Brighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Hover effects for Option Button */
+.option-btn:hover {
+    background: linear-gradient(135deg, #E3B482, #B2774A); /* Brighter light brown gradient */
+    border-color: #8A5A23; /* Lighter border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -3px 4px rgba(255, 255, 255, 0.2); /* Enhanced hover shadow */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Active state for Delete Button */
+.upload-btn:active {
+    background: #5C1E09; /* Dark solid brown for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Active state for Option Button */
+.option-btn:active {
+    background: #7A4F22; /* Medium brown solid for active state */
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inset shadow for click effect */
+}
+
+/* Focus state for both buttons */
+.upload-btn:focus, .option-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(182, 125, 91, 0.8); /* Soft brown glow effect */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 85%; /* Adjust modal width for smaller screens */
+        padding: 30px;
+    }
+
+    .modal-header h1 {
+        font-size: 2em; /* Adjust header title size */
+    }
+    .modal-header h2 {
+        font-size: 1.8em;
+    }
+
+    .close-btn {
+      font-size: 2em;
+    }
+
+  .image-preview-placeholder {
+    height: 150px;
+     font-size: 12px;
+  }
+    .image-preview {
+      height: 350px;
+    }
+
+    .option-btn, .upload-btn {
+        padding: 8px 16px;
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .upload-btn i, .option-btn i {
+        margin-right: 5px;
+         font-size: 14px;
+    }
+
+      .button-row {
+        height: 40px; /* Adjust height for responsiveness */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .modal-header h1 {
+         font-size: 1.7em;
+    }
+    .modal-header h2 {
+          font-size: 1.5em;
+    }
+
+      .close-btn {
+        font-size: 1.8em;
+    }
+       .image-preview-placeholder {
+        height: 120px;
+        font-size: 11px;
+    }
+    .image-preview {
+      height: 250px;
+    }
+
+      .option-btn, .upload-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        margin-right: 8px; /* Reduce space between buttons */
+    }
+      .upload-btn i, .option-btn i {
+         font-size: 12px;
+    }
+
+     .button-row {
+        height: 35px;
+          gap: 5px;
+    }
+}

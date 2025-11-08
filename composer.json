@@ -1,0 +1,11 @@
+{
+    "name": "emanryan/2factor",
+    "autoload": {
+        "psr-4": {
+            "Emanryan\\2factor\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
