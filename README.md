@@ -52,7 +52,7 @@ The platform is divided into four major portals, each with specialized features:
 | **Frontend**    | HTML, CSS, JavaScript, AJAX         |
 | **Backend**     | PHP                                 |
 | **Database**    | MySQL                               |
-| **Libraries**   | PHPMailer (for password reset emails) |
+| **Libraries**   | PHPMailer (for password reset emails and 2FA notification) |
 
 ---
 
@@ -222,7 +222,7 @@ Figure 29. Lists of products with their total revenue and the corresponding deli
 Figure 30. A table displaying a list of recent orders assigned for delivery.
 
 ---
-<img width="980" height="442" alt="image" src="https://github.com/user-attachments/assets/c35033ed-f507-4ccb-9ab3-5bcea31955d4" />
+<img width="978" height="439" alt="image" src="https://github.com/user-attachments/assets/13c1b7b8-111a-4709-b570-28c008e8f628" />
 Figure 31. A list of pending delivery receipts that need a proof of delivery to be uploaded.
 
 ---
@@ -234,7 +234,7 @@ Figure 32. The page for uploading a proof of receipt for a delivered order.
 Figure 33. An example of a proof of receipt from a delivery company.
 
 ---
-<img width="980" height="440" alt="image" src="https://github.com/user-attachments/assets/3fd32d66-182a-4cc1-aa28-6dba7713d49a" />
+<img width="972" height="435" alt="image" src="https://github.com/user-attachments/assets/d44e821a-51a0-44af-a317-0175e9b3ff5f" />
 Figure 34. A list of successfully delivered products with their proof of receipt.
 
 </details>
@@ -247,7 +247,7 @@ Figure 34. A list of successfully delivered products with their proof of receipt
 Figure 35. The main landing page introducing CraftHive and its products.
 
 ---
-<img width="980" height="437" alt="image" src="https://github.com/user-attachments/assets/54c02460-78c3-4910-b179-b0093b55effd" />
+<img width="1099" height="489" alt="image" src="https://github.com/user-attachments/assets/8106f8f3-45c9-412c-b018-ca0a23c924b0" />
 Figure 36. The company directory page, allowing users to select an artisan company to browse.
 
 ---
@@ -299,7 +299,7 @@ Figure 47. An example of a populated cart.
 Figure 48. An example of the checkout page with an item summary.
 
 ---
-<img width="980" height="386" alt="image" src="https://github.com/user-attachments/assets/b426ac7a-9d13-49f3-947b-657208a38ae3" />
+<img width="1099" height="430" alt="image" src="https://github.com/user-attachments/assets/5c09fee5-100a-483f-840b-ee30f55b4c05" />
 Figure 49. The customer's order history page with an option to add a review.
 
 ---
